@@ -10,34 +10,34 @@ sh_ver="2.0.9"
 
 #0升级脚本
 Update_Shell(){
-	sh_new_ver=$(wget --no-check-certificate -qO- -t1 -T3 "https://github.com/xianrenjituan/hj/master/hj.sh"|grep 'sh_ver="'|awk -F "=" '{print $NF}'|sed 's/\"//g'|head -1) && sh_new_type="github"
+	sh_new_ver=$(wget --no-check-certificate -qO- -t1 -T3 "https://raw.githubusercontent.com/xianrenjituan/hj/master/hj.sh"|grep 'sh_ver="'|awk -F "=" '{print $NF}'|sed 's/\"//g'|head -1) && sh_new_type="github"
 	[[ -z ${sh_new_ver} ]] && echo -e "${Error} 无法链接到 Github !" && exit 0
-	wget -N --no-check-certificate "https://github.com/xianrenjituan/hj/master/hj.sh" && chmod +x hj.sh
+	wget -N --no-check-certificate "https://raw.githubusercontent.com/xianrenjituan/hj/master/hj.sh" && chmod +x hj.sh
 	echo -e "脚本已更新为最新版本[ ${sh_new_ver} ] !(注意：因为更新方式为直接覆盖当前运行的脚本，所以可能下面会提示一些报错，无视即可)" && exit 0
 }
  #1安装BBR 锐速
 bbr_ruisu(){
-	bash <(curl -s -L https://github.com/xianrenjituan/Linux-NetSpeed/master/tcp.sh)
+	bash <(curl -s -L https://raw.githubusercontent.com/xianrenjituan/Linux-NetSpeed/master/tcp.sh)
 }
 #2谷歌 BBR2 BBRV2
 Google_bbr2(){
-	bash <(curl -s -L https://github.com/xianrenjituan/bbr2.sh/master/bbr2.sh)
+	bash <(curl -s -L https://raw.githubusercontent.com/xianrenjituan/bbr2.sh/master/bbr2.sh)
 }
 #3安装KCPtun
 Kcptun(){
-	bash <(curl -s -L https://github.com/xianrenjituan/Kcptun/master/kcptun/kcptun.sh)
+	bash <(curl -s -L https://raw.githubusercontent.com/xianrenjituan/Kcptun/master/kcptun/kcptun.sh)
 }
 #4安装SSR多用户版
 Install_ssr(){
-	bash <(curl -s -L https://github.com/xianrenjituan/doubi/master/ssrmu.sh)
+	bash <(curl -s -L https://raw.githubusercontent.com/xianrenjituan/doubi/master/ssrmu.sh)
 }
 #5安装V2ary_233一键
 Install_V2ray(){
-	bash <(curl -s -L https://github.com/xianrenjituan/v2ray/master/v2.sh)
+	bash <(curl -s -L https://raw.githubusercontent.com/xianrenjituan/v2ray/master/v2.sh)
 }
 #6安装Tg专用代理
 Tg_socks(){
-	bash <(curl -s -L https://github.com/xianrenjituan/mtg-dist/master/install.sh)
+	bash <(curl -s -L https://raw.githubusercontent.com/xianrenjituan/mtg-dist/master/install.sh)
 }
 #7安装Goflyway
 Install_goflyway(){
@@ -45,24 +45,24 @@ Install_goflyway(){
 }
 #8小鸡性能测试
 View_superbench(){
-	bash <(curl -s -L https://github.com/xianrenjituan/cesu/master/superbench.sh)
+	bash <(curl -s -L https://raw.githubusercontent.com/xianrenjituan/cesu/master/superbench.sh)
 }
 
 #9回程线路测试
 View_huicheng(){
-	wget -N --no-check-certificate https://github.com/xianrenjituan/huicheng/master/huicheng && chmod +x huicheng
+	wget -N --no-check-certificate https://raw.githubusercontent.com/xianrenjituan/huicheng/master/huicheng && chmod +x huicheng
 }
 #10安装云监控
 Install_status(){
-	bash <(curl -s -L https://github.com/xianrenjituan/doubi/master/status.sh)
+	bash <(curl -s -L https://raw.githubusercontent.com/xianrenjituan/doubi/master/status.sh)
 }
 #11一键DD包（OD源）
 DD_OD(){
-	bash <(curl -s -L https://github.com/xianrenjituan/dd/master/dd-od.sh)
+	bash <(curl -s -L https://raw.githubusercontent.com/xianrenjituan/dd/master/dd-od.sh)
 }
 #12一键DD包（GD源）
 DD_GD(){
-	bash <(curl -s -L https://github.com/xianrenjituan/dd/master/dd-gd.sh)
+	bash <(curl -s -L https://raw.githubusercontent.com/xianrenjituan/dd/master/dd-gd.sh)
 }
 #13一键开启默认bbr
 open_bbr(){
@@ -70,15 +70,15 @@ open_bbr(){
 }
 #14改ls颜色(debian)
 ls_color(){
-	wget https://github.com/xianrenjituan/hj/master/bashrc && mv /root/bashrc /root/.bashrc
+	wget https://raw.githubusercontent.com/xianrenjituan/hj/master/bashrc && mv /root/bashrc /root/.bashrc
 }
 #15 Netflix解锁检测
 netflix(){
-bash <(curl -sSL "https://github.com/veip007/Netflix_Unlock_Information/raw/main/netflix.sh")	
+bash <(curl -sSL "https://raw.githubusercontent.com/veip007/Netflix_Unlock_Information/raw/main/netflix.sh")	
 }
 #16 xray
 xray(){
-bash <(curl -sSL "https://github.com/xianrenjituan/scripts/master/xray.sh")	
+bash <(curl -sSL "https://raw.githubusercontent.com/xianrenjituan/scripts/master/xray.sh")	
 }
 action=$1
 if [[ "${action}" == "monitor" ]]; then
